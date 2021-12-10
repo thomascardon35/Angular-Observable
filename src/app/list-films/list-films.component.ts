@@ -10,7 +10,5 @@ export class ListFilmsComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {
-    //console.log(this.allDatas);
-  }
+  ngOnInit() {}
 }
