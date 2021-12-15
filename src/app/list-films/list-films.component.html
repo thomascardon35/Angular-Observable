@@ -1,4 +1,7 @@
-
-<p *ngFor="let data of allDatas">
-{{data.title}}  {{data.release_date}} 
-</p>
+<button
+  class="btn btn-primary"
+  *ngFor="let data of allDatas"
+  (click)="onClick(data)"
+>
+  {{ data.title }} {{ data.release_date.substr(0, 4) }}
+</button>

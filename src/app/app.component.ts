@@ -9,8 +9,15 @@ import { SwapiService } from './swapi.service';
 export class AppComponent implements OnInit {
   datas;
   isLoading = true;
+  detailsFilm;
 
-  constructor(private swapiService: SwapiService) {}
+  constructor(private swapiService: SwapiService) {
+    this.detailsFilm = [];
+  }
+
+  getDetails(event: any) {
+    this.detailsFilm = event;
+  }
 
   ngOnInit() {
     this.swapiService.getData().subscribe((data: any) => {

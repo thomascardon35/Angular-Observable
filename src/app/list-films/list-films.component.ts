@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-list-films',
@@ -7,8 +7,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ListFilmsComponent implements OnInit {
   @Input() allDatas;
+  @Output() clickOnBtn = new EventEmitter();
 
   constructor() {}
+
+
+  onClick(event : any){
+    console.log(event);
+    this.clickOnBtn.emit(event);
+
+  }
+
 
   ngOnInit() {}
 }

@@ -1,1 +1,13 @@
-<app-list-films [allDatas]="datas"></app-list-films>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <app-list-films
+        [allDatas]="datas"
+        (clickOnBtn)="getDetails($event)"
+      ></app-list-films>
+    </div>
+    <div class="col">
+      <app-film-details [allDetails]="detailsFilm"></app-film-details>
+    </div>
+  </div>
+</div>
